@@ -18,13 +18,13 @@ function _show_me_the_fish
     if test -n "$git_status"
       if git status --porcelain ^/dev/null | grep '^.[^ ]' >/dev/null
         # status is dirty
-        set the_fish (set_color d70000)'⋊'(set_color ff0000)'>'
+        set the_fish (set_color red)'⋊>'
       else
         # status is staged
-        set the_fish (set_color ffaf00)'⋊'(set_color ff8700)'>'
+        set the_fish (set_color yellow)'⋊>'
       end
     else
-      set the_fish (set_color 00ff5f)'⋊'(set_color 00ff00)'>'
+      set the_fish (set_color green)'⋊>'
     end
   else 
     set the_fish (set_color yellow)"⋊>"
