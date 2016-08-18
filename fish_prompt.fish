@@ -73,6 +73,10 @@ function updatedb -d "Updates 'locate' database"
   sudo /usr/libexec/locate.updatedb
 end
 
+function gc 
+  git commit -am "$argv"
+end  
+
 function fish_prompt
   set -l cyan (set_color cyan)
   set -l brown (set_color brown)
